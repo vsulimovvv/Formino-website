@@ -1,0 +1,125 @@
+.testimonials {
+  padding-top: 120px;
+
+  .title {
+    max-width: 337px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+  }
+  &__slide-img {
+    margin-right: 30px;
+    flex-shrink: 0;
+    width: 217px;
+    height: 217px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include breakpoints($point-4) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    @include breakpoints($point-5) {
+      width: 150px;
+      height: 150px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__wrapper {
+    width: 100%;
+  }
+  &__slider {
+    padding-bottom: 90px;
+  }
+  &__slide-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // max-width: 980px;
+    padding: 0 50px;
+    margin: 0 auto;
+
+    @include breakpoints($point-2) {
+      // max-width: 780px;
+    }
+    @include breakpoints($point-4) {
+      flex-direction: column;
+    }
+  }
+  &__slide-descr {
+    padding-top: 8px;
+    @include text();
+    margin-bottom: 30px;
+    max-width: 733px;
+    line-height: 28px;
+    @include breakpoints($point-4) {
+      max-width: 550px;
+    }
+  }
+  &__slide-title {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 8px;
+  }
+  &__slide-prof {
+    @include text();
+    color: var(--color-accent);
+    font-family: var(--LatoItalic);
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    &::after {
+      content: '';
+    }
+    top: 50%;
+    transform: translateY(calc(50% - 80px));
+    z-index: 100;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: var(--shadow-green);
+    transition: 150ms ease-in-out;
+    svg {
+      path {
+        transition: 150ms ease-in-out;
+      }
+    }
+    &:hover {
+      background-color: var(--color-accent);
+      svg {
+        path {
+          fill: var(--color-white);
+        }
+      }
+    }
+    @include breakpoints($point-4) {
+      top: 20%;
+    }
+    @include breakpoints($point-420) {
+      top: initial;
+      bottom: 0;
+      margin: 10px;
+    }
+  }
+  .swiper-button-next {
+    right: 0;
+    @include breakpoints($point-420) {
+      left: initial;
+      left: 50%;
+      transform: translateY(0);
+    }
+  }
+  .swiper-button-prev {
+    left: 0;
+    @include breakpoints($point-420) {
+      left: initial;
+      right: 50%;
+      transform: translateY(0);
+    }
+  }
+}

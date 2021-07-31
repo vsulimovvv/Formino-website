@@ -1,0 +1,79 @@
+.footer {
+  padding-top: 170px;
+  &__wrapper {
+    position: relative;
+    min-height: 486px;
+    background: url('https://images.unsplash.com/photo-1511881220587-13b89d1da6b8?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=774&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .wrap {
+    max-width: 1210px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: minmax(auto, 480px) minmax(auto, 580px);
+    gap: 120px;
+    justify-content: space-between;
+    @include breakpoints($point-2) {
+      gap: 20px;
+      grid-template-columns: minmax(auto, 400px) minmax(auto, 580px);
+    }
+    @include breakpoints($point-4) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__logo {
+    margin-bottom: 22px;
+    width: 217px;
+    height: 65px;
+    flex-shrink: 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__offer {
+    padding-top: 82px;
+    max-width: 100%;
+    padding-left: 5px;
+    @include breakpoints($point-3) {
+      padding-top: 82px;
+    }
+    @include breakpoints($point-4) {
+      max-width: 100%;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+  }
+  &__social {
+    margin-bottom: 80px;
+    @include breakpoints($point-4) {
+      margin-bottom: 43px;
+    }
+  }
+  &__descr {
+    margin-bottom: 43px;
+    @include text();
+  }
+  &__bottom {
+    p {
+      @include text();
+    }
+  }
+  .column {
+    position: relative;
+  }
+  &__form {
+    position: absolute;
+    top: -114px;
+    right: 0;
+    z-index: 11;
+    @include breakpoints($point-3) {
+      position: static;
+    }
+  }
+}

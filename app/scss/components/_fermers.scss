@@ -1,0 +1,25 @@
+.fermers {
+  padding-top: 174px;
+  padding-bottom: 170px;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    gap: 20px;
+    @include breakpoints($point-2) {
+      grid-template-columns: repeat(3, minmax(auto, 1fr));
+      justify-content: center;
+    }
+    @include breakpoints($point-3) {
+      grid-template-columns: repeat(2, minmax(auto, 1fr));
+    }
+    @include breakpoints($point-650) {
+      grid-template-columns: repeat(1, minmax(auto, 1fr));
+    }
+  }
+  &__item {
+    justify-self: center;
+  }
+  .title {
+    margin-bottom: 56px;
+  }
+}

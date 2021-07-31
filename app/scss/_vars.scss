@@ -1,0 +1,53 @@
+:root {
+  //*==== Fonts
+  --LatoLight: 'LatoLight';
+  --LatoLightItalic: 'LatoLightItalic';
+  --LatoItalic: 'LatoItalic';
+  --LatoRegular: 'LatoRegular';
+  --LatoBold: 'LatoBold';
+
+  --RubikLightItalic: 'RubikLightItalic';
+  --RubikRegular: 'RubikRegular';
+  --RubikRegularItalic: 'RubikRegularItalic';
+  --RubikMedium: 'RubikMedium';
+  --RubikBold: 'RubikBold';
+
+  // //* Breakpoints
+  // --point-1: 1440px;
+  // --point-2: 1220px; // container width
+  // --point-3: 991px;
+  // --point-4: 768px;
+  // --point-5: 576px;
+  // --point-6: 375px;
+
+  //*==== Spacing
+
+  //*===== Colors
+  --color-white: #fff;
+  --color-black: #000;
+  --color-primary: #1d4d4f;
+  --color-accent: #7fb800;
+  --color-unaccent: #adb5bd;
+  --color-dark: #443737;
+  --color-yellow: #fab522;
+  //*==== Gradient
+  --gradient-green: linear-gradient(334.24deg, #7fb800 -9.84%, #0f9b0f 121.28%);
+  --shadow-button-green: 0px 4px 15px rgba(127, 184, 0, 0.401852);
+  --shadow-button-yellow: 0px 4px 15px rgba(250, 181, 34, 0.401852);
+
+  --gradient-form: linear-gradient(334.24deg, #7fb800 -9.84%, #0f9b0f 121.28%);
+  // * ===== Shadow
+  --shadow-green: 0px 0px 15px rgba(127, 184, 0, 0.15);
+}
+
+//* Breakpoints
+$point-0: 1920px;
+$point-1: 1440px;
+$point-2: 1220px; // container width
+$point-3: 991px;
+$point-4: 768px;
+$point-5: 576px;
+$point-6: 375px;
+
+$point-650: 650px;
+$point-420: 420px;

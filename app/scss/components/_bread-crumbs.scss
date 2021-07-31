@@ -1,0 +1,118 @@
+.bread-crumbs {
+  width: 100%;
+  background-color: #f1f1f1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  &__wrapper {
+    min-height: 428px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  &__offer {
+    @include backgroundOffer();
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    position: relative;
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background-color: var(--color-accent);
+      top: 50%;
+      right: 15px;
+      transform: translateY(-50%);
+    }
+    &:not(:last-child) {
+      padding-right: 35px;
+    }
+    &:last-child {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &__link {
+    font-family: var(--LatoRegular);
+    font-size: 17px;
+    line-height: 20px;
+    color: var(--color-dark);
+    transition: 150ms ease-in-out;
+    &:hover {
+      color: var(--color-accent);
+    }
+  }
+}
+.bread-crumbs--big {
+  background-color: transparent;
+  .bread-crumbs__img {
+    padding-bottom: 47%;
+    background-color: #f1f1f1;
+    margin-bottom: 80px;
+  }
+  .bread-crumbs__title {
+    font-family: var(--RubikMedium);
+    font-size: 82px;
+    line-height: 98px;
+    color: var(--color-primary);
+    @include breakpoints($point-3) {
+      font-size: 62px;
+      line-height: 78px;
+      max-width: 655px;
+    }
+    @include breakpoints($point-4) {
+      font-size: 48px;
+      line-height: 64px;
+    }
+    @include breakpoints($point-5) {
+      font-size: 30px;
+      line-height: 46px;
+      max-width: 370px;
+    }
+    @include breakpoints($point-6) {
+      font-size: 26px;
+      line-height: 40px;
+      max-width: 370px;
+    }
+  }
+  .wrapper {
+  }
+}
+.bread-crumbs--about {
+  background-image: url('../../images/content/bread-crumbs/2.jpg');
+}
+.bread-crumbs--services {
+  background-image: url('../../images/content/bread-crumbs/3.jpg');
+}
+.bread-crumbs--farmers {
+  background-image: url('../../images/content/bread-crumbs/4.jpg');
+}
+.bread-crumbs--contacts {
+  background-image: url('../../images/content/bread-crumbs/9.jpg');
+}
+.bread-crumbs--single-page {
+  .bread-crumbs__img {
+    background-image: url('../../images/content/bread-crumbs/8.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+.bread-crumbs--news {
+  background-image: url('../../images/content/bread-crumbs/7.jpg');
+}
+.bread-crumbs--faqs {
+  background-image: url('../../images/content/bread-crumbs/6.jpg');
+}
+.bread-crumbs--gallery {
+  background-image: url('../../images/content/bread-crumbs/5.jpg');
+}

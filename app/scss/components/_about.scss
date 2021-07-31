@@ -1,0 +1,194 @@
+.about {
+  padding-top: 80px;
+  padding-bottom: 170px;
+  .title {
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    @include breakpoints($point-4) {
+      max-width: 335px;
+    }
+  }
+  &__wrapper {
+    max-width: 1950px;
+    padding-left: 263px;
+    display: grid;
+    grid-template-columns: minmax(auto, 575px) minmax(auto, 959px);
+    gap: 46px;
+    align-items: center;
+    @include breakpoints($point-0) {
+      padding-left: 0;
+    }
+    @include breakpoints($point-3) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__title {
+    font-family: var(--RubikBold);
+    max-width: 398px;
+    font-size: 24px;
+    line-height: 38px;
+    margin-bottom: 30px;
+  }
+  &__descr {
+    @include text();
+    font-family: var(--LatoRegualr);
+    max-width: 575px;
+    margin-bottom: 50px;
+  }
+  &__benefit {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+  &__slider {
+    width: 100%;
+    height: 100%;
+    margin-top: -62px;
+    @include breakpoints($point-3) {
+      height: 530px;
+    }
+  }
+  &__slides {
+  }
+  &__slide {
+    text-align: center;
+    height: 349px;
+    background-color: #fff;
+    box-shadow: var(--shadow-green);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 50px;
+    border-radius: 20px;
+    transition: 200ms ease-in-out;
+    @include breakpoints($point-3) {
+      // height: 510px;
+    }
+  }
+  &__slide-img {
+    margin-bottom: 25px;
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 150ms ease-in-out;
+    svg {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      path {
+        fill: var(--color-white);
+        transition: 150ms ease-in-out;
+      }
+    }
+  }
+  &__slide-title {
+    font-size: 28px;
+    line-height: 36px;
+    color: var(--color-dark);
+    margin-bottom: 10px;
+  }
+  &__slide-descr {
+    @include text();
+    max-width: 219px;
+  }
+  @include breakpoints($point-3) {
+    &__content {
+      margin-bottom: 30px;
+    }
+  }
+  .swiper-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .swiper-slide-active {
+    background-color: var(--color-accent);
+    height: 445px;
+    max-width: 358px !important;
+    min-width: 358px !important;
+    padding-top: 88px;
+    @include breakpoints($point-420) {
+      min-width: 100% !important;
+    }
+    .about__slide-title {
+      color: #fff;
+    }
+    .about__slide-descr {
+      color: #fff;
+    }
+    .about__slide-img {
+      background-color: #fff;
+      width: 126px;
+      height: 126px;
+      svg {
+        width: 76px;
+        height: 76px;
+        path {
+          fill: var(--color-accent);
+        }
+      }
+    }
+  }
+  .swiper-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 10px;
+    left: 51.5%;
+    transform: translateX(-50%);
+    @include breakpoints($point-3) {
+      bottom: 0px;
+    }
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      background-color: var(--color-unaccent);
+      &:not(:last-child) {
+        margin-right: 15px;
+      }
+    }
+    .swiper-pagination-bullet-active {
+      width: 18px;
+      height: 18px;
+      background-color: var(--color-yellow);
+    }
+  }
+}
+
+.benefit {
+  display: flex;
+  width: 100%;
+  &__img {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid var(--color-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    img {
+      width: 39px;
+      height: 29px;
+      object-fit: cover;
+    }
+  }
+  &__title {
+    font-family: var(--RubikMedium);
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+  &__descr {
+    @include text();
+  }
+}

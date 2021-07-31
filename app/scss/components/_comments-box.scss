@@ -1,0 +1,23 @@
+.post-comment,
+.add-comment {
+  padding-top: 100px;
+  &__title {
+    font-family: var(--RubikRegular);
+    font-size: 42px;
+    line-height: 56px;
+    color: var(--color-primary);
+    margin-bottom: 30px;
+    @include breakpoints($point-4) {
+      font-size: 36px;
+      line-height: 50px;
+    }
+    @include breakpoints($point-420) {
+      font-size: 30px;
+      line-height: 44px;
+    }
+  }
+}
+.add-comment {
+  padding-top: 115px;
+  padding-bottom: 170px;
+}

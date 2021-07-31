@@ -1,0 +1,20 @@
+.meta {
+  display: flex;
+  align-items: center;
+
+  &__item {
+    font-family: var(--LatoItalic);
+    font-size: 17px;
+    line-height: 26px;
+    color: #888888;
+    &:not(:last-child) {
+      margin-right: 19px;
+    }
+  }
+  &__date {
+    color: var(--color-accent);
+  }
+  span {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,102 @@
+@mixin link {
+  font-family: var(--RubikRegular);
+  font-size: 18px;
+  line-height: 21px;
+  color: var(--color-dark);
+}
+@mixin mainTitle {
+  font-family: var(--RubikBold);
+  font-size: 82px;
+  line-height: 98px;
+  color: var(--color-primary);
+  @include breakpoints($point-4) {
+    font-size: 62px;
+    line-height: 78px;
+  }
+  @include breakpoints($point-5) {
+    font-size: 52px;
+    line-height: 68px;
+  }
+  @include breakpoints($point-6) {
+    font-size: 42px;
+    line-height: 58px;
+  }
+}
+@mixin text {
+  font-family: var(--LatoLight);
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--color-dark);
+}
+@mixin textRegular {
+  font-family: var(--LatoRegualr);
+  font-size: 17px;
+  line-height: 26px;
+  color: var(--color-dark);
+}
+@mixin sectionTitle() {
+  font-family: var(--RubikBold);
+  font-size: 60px;
+  line-height: 76px;
+  text-align: center;
+  color: var(--color-primary);
+}
+@mixin linkLineBottom() {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: '';
+    bottom: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 150ms ease-in-out;
+  }
+  &:hover {
+    color: var(--color-accent);
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+}
+@mixin circle() {
+  position: relative;
+  &::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: var(--color-accent);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+}
+@mixin breakpoints($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+@mixin breakpointsMin($bp) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}
+
+@mixin backgroundOffer {
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 50px;
+  max-width: 655px;
+  width: auto;
+  border-radius: 50px;
+  backdrop-filter: blur(8px);
+  @include breakpoints($point-650) {
+    padding: 30px;
+    border-radius: 30px;
+  }
+}

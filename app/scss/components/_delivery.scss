@@ -1,0 +1,133 @@
+.delivery {
+  padding-top: 172px;
+  &__wrapper {
+    padding-left: 315px;
+    @include breakpoints($point-0) {
+      padding-left: 0;
+    }
+  }
+  .title {
+    max-width: 790px;
+    margin-bottom: 60px;
+    h2,
+    span {
+      text-align: left;
+    }
+    @include breakpoints($point-5) {
+      h2 {
+        font-size: 36px;
+        line-height: 50px;
+      }
+    }
+    @include breakpoints($point-6) {
+      h2 {
+        font-size: 22px;
+        line-height: 36px;
+      }
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(auto, 372px));
+    gap: 20px;
+    @include breakpoints($point-2) {
+      grid-template-columns: repeat(3, minmax(auto, 372px));
+    }
+    @include breakpoints($point-3) {
+      grid-template-columns: repeat(2, minmax(auto, 372px));
+    }
+    @include breakpoints($point-650) {
+      grid-template-columns: repeat(1, minmax(auto, 372px));
+    }
+  }
+  &__item {
+    max-width: 372px;
+    width: 100%;
+    min-height: 227px;
+    padding-top: 60px;
+    position: relative;
+    .circle {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40px;
+      height: 40px;
+      background-color: var(--color-accent);
+      border-radius: 50%;
+      &::before {
+        position: absolute;
+        content: '';
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: 200ms ease-in-out;
+      }
+    }
+    .line {
+      position: absolute;
+      top: 21px;
+      right: 0;
+      width: 83.5%;
+      height: 3px;
+      background-color: #adb5bd;
+      transition: 200ms ease-in-out;
+      &::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #e2f6b9;
+        transition: 200ms ease-in-out;
+      }
+    }
+    &.active {
+      .line {
+        &::before {
+          width: 100%;
+        }
+      }
+      .circle {
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+    &:hover {
+      .line {
+        &::before {
+          width: 100%;
+        }
+      }
+      .circle {
+        &::before {
+          opacity: 0;
+        }
+      }
+    }
+    &:hover {
+    }
+  }
+  &__item-descr {
+    @include text();
+  }
+  &__item-year {
+    font-family: var(--RubikMedium);
+    margin-bottom: 15px;
+    font-size: 28px;
+    line-height: 36px;
+  }
+  &__item-title {
+    font-family: var(--RubikRegular);
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 10px;
+  }
+}

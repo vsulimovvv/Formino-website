@@ -1,0 +1,24 @@
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__list {
+    display: flex;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-right: 39px;
+    }
+  }
+  &__link {
+    @include text();
+    &--active {
+      color: #7fb800;
+      font-family: var(--LatoBold);
+    }
+    &:hover {
+      color: #7fb800;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.services-grid {
+  padding-top: 119px;
+  padding-bottom: 165px;
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px 20px;
+    margin-bottom: 65px;
+    @include breakpoints($point-2) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoints($point-4) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoints($point-5) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    justify-self: center;
+  }
+}

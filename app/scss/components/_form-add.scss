@@ -1,0 +1,50 @@
+.form-add {
+  width: 100%;
+  &--subscribe {
+    // @include breakpoints($point-3) {
+    //   max-width: ;
+    // }
+  }
+  &__group {
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+    @include breakpoints($point-420) {
+      flex-direction: column;
+    }
+  }
+  &__field {
+    max-width: 480px;
+    width: 100%;
+    &:first-child {
+      margin-right: 20px;
+    }
+    @include breakpoints($point-420) {
+      &:first-child {
+        margin-right: 0;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__field--textarea {
+    max-width: 980px;
+    width: 100%;
+    margin-bottom: 40px;
+    .input {
+      resize: none;
+      min-height: 153px;
+    }
+  }
+  &__input {
+    display: inline-block;
+    width: 100%;
+  }
+  &__bottom {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  &__button {
+    padding: 15px 51px;
+  }
+}

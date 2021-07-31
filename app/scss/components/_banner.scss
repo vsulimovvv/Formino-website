@@ -1,0 +1,118 @@
+.banner {
+  // padding-top: 30px;
+  // padding-bottom: 30px;
+  &__wrapper {
+    background-image: url('../../images/content/bread-crumbs/9.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    // background-attachment: fixed;
+    min-height: 740px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    @include breakpoints($point-4) {
+      min-height: 600px;
+    }
+  }
+  &__offer {
+    max-width: 769px;
+    margin-left: -75px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+    @include breakpoints($point-3) {
+      max-width: 450px;
+      margin-left: 0;
+    }
+    @include breakpoints($point-4) {
+      max-width: 300px;
+    }
+    @include breakpoints($point-6) {
+      max-width: 230px;
+    }
+  }
+  &__title {
+    text-transform: uppercase;
+    color: var(--color-accent);
+    font-size: 150px;
+    line-height: 98px;
+    font-family: var(--RubikBold);
+    margin-top: 45px;
+    &--yellow {
+      margin-top: 62px;
+      margin-bottom: 42px;
+      color: var(--color-yellow);
+      margin-left: auto;
+      font-size: 120px;
+      line-height: 98px;
+    }
+    @include breakpoints($point-3) {
+      font-size: 90px;
+      line-height: 68px;
+      &--yellow {
+        font-size: 80px;
+        line-height: 68px;
+      }
+    }
+    @include breakpoints($point-4) {
+      font-size: 60px;
+      line-height: 38px;
+      &--yellow {
+        font-size: 50px;
+        line-height: 38px;
+      }
+    }
+    @include breakpoints($point-6) {
+      font-size: 50px;
+      line-height: 28px;
+      &--yellow {
+        font-size: 40px;
+        line-height: 28px;
+      }
+    }
+  }
+  &__button {
+    margin: 0 auto;
+    padding: 15px 46px;
+  }
+  &__social {
+    position: absolute;
+    right: 58px;
+    bottom: 95px;
+    width: auto;
+    @include breakpoints($point-4) {
+      bottom: 50px;
+
+      left: 50%;
+      transform: translateX(-50%);
+      width: 192px;
+    }
+    .social__list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      width: 23px;
+      @include breakpoints($point-4) {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+    }
+    .social__item {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+        margin-right: 0;
+        @include breakpoints($point-4) {
+          margin-bottom: 0;
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}
