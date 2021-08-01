@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="images/fav.png" type="image/x-icon" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!--  -->
+    <link rel="stylesheet" href="css/style.min.css" />
+    <title>07</title>
+  </head>
+  <body>
+    <div class="site-wrapper">
+      <div class="overflow"></div>
+      <div class="search-page">
+        <input
+          class="search-page__input"
+          type="text"
+          placeholder="Start typing"
+        />
+
+        <button class="search-page__close"><i class="fas fa-times"></i></button>
+      </div>
+      <header class="header" id="header">
+        <div class="container-1180">
+          <div class="header__wrapper">
+            <a href="#" class="logo">
+              <img src="images/logo.png" alt="" />
+            </a>
+            <nav class="nav" id="toggle-nav">
+              <ul class="nav__list">
+                <li class="nav__item">
+                  <a href="#" class="nav__link link link--active">Home</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link link">About</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link link">Services</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link link">Gallery</a>
+                </li>
+                <li class="nav__item">
+                  <a href="#" class="nav__link link">Contacts</a>
+                </li>
+                <li class="nav__item search">
+                  <button class="search__btn"></button>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="header__toggle" id="toggle-btn">
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="container-1700">
+          <section class="bread-crumbs bread-crumbs--news">
+            <div class="container-1180">
+              <div class="bread-crumbs__wrapper">
+                <h1 class="section-title">Latest News</h1>
+                <ul class="bread-crumbs__list">
+                  <li class="bread-crumbs__item">
+                    <a class="bread-crumbs__link" href="#">Home</a>
+                  </li>
+                  <li class="bread-crumbs__item">
+                    <a class="bread-crumbs__link" href="#">About</a>
+                  </li>
+                  <li class="bread-crumbs__item">
+                    <a class="bread-crumbs__link" href="#">Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <section class="news">
+          <div class="container-1180">
+            <div class="news__wrapper">
+              <div class="news__content">
+                <div class="news__post post">
+                  <div class="post__img">
+                    <img
+                      src="https://images.unsplash.com/photo-1593642634402-b0eb5e2eebc9?ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+                      alt=""
+                    />
+                  </div>
+                  <div class="post__info">
+                    <div class="post__top">
+                      <span class="color-accent">25 Aug 2020</span>
+                      <span>by Merkulove</span>
+                    </div>
+                    <h3 class="post__title">
+                      Practical Suggestions To Improve Usability Landing
+                    </h3>
+                    <p class="post__text">
+                      Fusce in nisi ut libero consequat mollis. Donec pulvinar
+                      elementum nisl, non hendre
+                    </p>
+                    <a href="#" class="post__button button-link"> Read More </a>
+                  </div>
+                </div>
+                <div class="news__post post">
+                  <div class="post__img">
+                    <img src="images/content/bread-crumbs/6.jpg" alt="" />
+                  </div>
+                  <div class="post__info">
+                    <div class="post__top">
+                      <span class="color-accent">25 Aug 2020</span>
+                      <span>by Merkulove</span>
+                    </div>
+                    <h3 class="post__title">
+                      Minimalist trending in modern agriculture
+                    </h3>
+                    <p class="post__text">
+                      Fusce in nisi ut libero consequat mollis. Donec pulvinar
+                      elementum nisl, non hendre
+                    </p>
+                    <a href="#" class="post__button button-link"> Read More </a>
+                  </div>
+                </div>
+
+                <div
+                  class="
+                    news__post
+                    post post--slider
+                    swiper-container
+                    post-slider
+                  "
+                >
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div
+                        class="post__slide"
+                        style="
+                          background-image: url('/images/content/bread-crumbs/1.jpg');
+                        "
+                      >
+                        <div class="post__info">
+                          <div class="post__top">
+                            <span class="color-accent">25 Aug 2020</span>
+                            <span>by Merkulove</span>
+                          </div>
+                          <h3 class="post__title">
+                            Practical Suggestions To Improve Usability Landing
+                          </h3>
+                          <p class="post__text">
+                            Fusce in nisi ut libero consequat mollis. Donec
+                            pulvinar elementum nisl, non hendre
+                          </p>
+                          <a href="#" class="post__button button-link">
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- <div class="swiper-slide">
+                      <div
+                        class="post__slide"
+                        style="
+                          background-image: url('/images/content/bread-crumbs/3.jpg');
+                        "
+                      >
+                        <div class="post__info">
+                          <div class="post__top">
+                            <span class="color-accent">25 Aug 2020</span>
+                            <span>by Merkulove</span>
+                          </div>
+                          <h3 class="post__title">
+                            Practical Suggestions To Improve Usability Landing
+                          </h3>
+                          <p class="post__text">
+                            Fusce in nisi ut libero consequat mollis. Donec
+                            pulvinar elementum nisl, non hendre
+                          </p>
+                          <a href="#" class="post__button button-link">
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div
+                        class="post__slide"
+                        style="
+                          background-image: url('/images/content/bread-crumbs/5.jpg');
+                        "
+                      >
+                        <div class="post__info">
+                          <div class="post__top">
+                            <span class="color-accent">25 Aug 2020</span>
+                            <span>by Merkulove</span>
+                          </div>
+                          <h3 class="post__title">
+                            Practical Suggestions To Improve Usability Landing
+                          </h3>
+                          <p class="post__text">
+                            Fusce in nisi ut libero consequat mollis. Donec
+                            pulvinar elementum nisl, non hendre
+                          </p>
+                          <a href="#" class="post__button button-link">
+                            Read More
+                          </a>
+                        </div>
+                      </div>
+                    </div> -->
+                  </div>
+                  <div class="swiper-button-next"></div>
+                  <div class="swiper-button-prev"></div>
+                </div>
+                <div class="news__post post">
+                  <div class="post__img">
+                    <img src="images/content/bread-crumbs/9.jpg" alt="" />
+                  </div>
+                  <div class="post__info">
+                    <div class="post__top">
+                      <span class="color-accent">25 Aug 2020</span>
+                      <span>by Merkulove</span>
+                    </div>
+                    <h3 class="post__title">
+                      Minimalist trending in modern agriculture
+                    </h3>
+                    <p class="post__text">
+                      Fusce in nisi ut libero consequat mollis. Donec pulvinar
+                      elementum nisl, non hendre
+                    </p>
+                    <a href="#" class="post__button button-link"> Read More </a>
+                  </div>
+                </div>
+
+                <div class="news__post post post--quote">
+                  <div class="post__info">
+                    <div class="post__top">
+                      <span class="color-accent">25 Aug 2020</span>
+                      <span>by Merkulove</span>
+                    </div>
+                    <p class="post__text">
+                      Donec placerat, metus sed consectetur viverra, dolor nisl
+                      egestas ligula, ac gravida turpis orci eget quam. Aliquam
+                      nulla nisi, accumsan id sapien varius, egestas vehicula
+                      diam. Suspendisse faucibus neque in ante dignissim
+                      interdum at sit amet tellus. Proin aliquam mi eget posuere
+                      porta. Nam porta neque vel lectus dicsftum condimentum.
+                    </p>
+                    <h4 class="post__name">Polina Podolski</h4>
+                    <span class="post__prof">Customer</span>
+                  </div>
+                </div>
+
+                <div class="news__post post">
+                  <div class="post__img">
+                    <img src="images/content/bread-crumbs/7.jpg" alt="" />
+                  </div>
+                  <div class="post__info">
+                    <div class="post__top">
+                      <span class="color-accent">25 Aug 2020</span>
+                      <span>by Merkulove</span>
+                    </div>
+                    <h3 class="post__title">
+                      Minimalist trending in modern agriculture
+                    </h3>
+                    <p class="post__text">
+                      Fusce in nisi ut libero consequat mollis. Donec pulvinar
+                      elementum nisl, non hendre
+                    </p>
+                    <a href="#" class="post__button button-link"> Read More </a>
+                  </div>
+                </div>
+                <div class="news__post post">
+                  <div class="post__img">
+                    <img src="images/content/bread-crumbs/8.jpg" alt="" />
+                  </div>
+                  <div class="post__info">
+                    <div class="post__top">
+                      <span class="color-accent">25 Aug 2020</span>
+                      <span>by Merkulove</span>
+                    </div>
+                    <h3 class="post__title">
+                      Minimalist trending in modern agriculture
+                    </h3>
+                    <p class="post__text">
+                      Fusce in nisi ut libero consequat mollis. Donec pulvinar
+                      elementum nisl, non hendre
+                    </p>
+                    <a href="#" class="post__button button-link"> Read More </a>
+                  </div>
+                </div>
+              </div>
+              <aside class="news__sidebar">
+                <div class="sidebar-box__form-search form-search">
+                  <form action="#" class="form-search">
+                    <div class="form-search__field">
+                      <input
+                        class="form-search__input"
+                        placeholder="Search word"
+                        type="text"
+                      />
+                      <button class="form-search__button">Submit</button>
+                    </div>
+                  </form>
+                </div>
+                <div class="sidebar-box sidebar-box--categories">
+                  <div class="sidebar-box__top">
+                    <h4 class="sidebar-box__title">Categories</h4>
+                  </div>
+                  <ul class="sidebar-box__list">
+                    <li class="sidebar-box__item">
+                      <span class="sidebar-box__name">Farming</span>
+                      <span class="sidebar-box__quantity">18</span>
+                    </li>
+                    <li class="sidebar-box__item">
+                      <span class="sidebar-box__name">Fermers</span>
+                      <span class="sidebar-box__quantity">145</span>
+                    </li>
+                    <li class="sidebar-box__item">
+                      <span class="sidebar-box__name">Latest News</span>
+                      <span class="sidebar-box__quantity">87</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sidebar-box sidebar-box--latest-post">
+                  <div class="sidebar-box__top">
+                    <h4 class="sidebar-box__title">Latest Posts</h4>
+                  </div>
+                  <ul class="sidebar-box__list">
+                    <li class="sidebar-box__item">
+                      <h4 class="sidebar-box__name">
+                        Minimalist trending in modern agriculture
+                      </h4>
+                      <div class="sidebar-box__bottom">
+                        <span>25 Aug 2020</span><span>by Merculove</span>
+                      </div>
+                    </li>
+                    <li class="sidebar-box__item">
+                      <h4 class="sidebar-box__name">
+                        Minimalist trending in modern agriculture
+                      </h4>
+                      <div class="sidebar-box__bottom">
+                        <span>25 Aug 2020</span><span>by Merculove</span>
+                      </div>
+                    </li>
+                    <li class="sidebar-box__item">
+                      <h4 class="sidebar-box__name">
+                        Minimalist trending in modern agriculture
+                      </h4>
+                      <div class="sidebar-box__bottom">
+                        <span>25 Aug 2020</span><span>by Merculove</span>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sidebar-box sidebar-box--recent-comments">
+                  <div class="sidebar-box__top">
+                    <h4 class="sidebar-box__title">Recent Comments</h4>
+                  </div>
+                  <ul class="sidebar-box__list">
+                    <li class="sidebar-box__item">
+                      <p class="sidebar-box__text">
+                        <strong>Admin</strong> in Mauris maximus iaculis nunc
+                        quis
+                      </p>
+                    </li>
+                    <li class="sidebar-box__item">
+                      <p class="sidebar-box__text">
+                        <strong>Admin</strong> in Mauris maximus iaculis nunc
+                        quis
+                      </p>
+                    </li>
+                    <li class="sidebar-box__item">
+                      <p class="sidebar-box__text">
+                        <strong>Admin</strong> in Mauris maximus iaculis nunc
+                        quis
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="sidebar-box sidebar-box--archives">
+                  <div class="sidebar-box__top">
+                    <h4 class="sidebar-box__title">Archives</h4>
+                  </div>
+                  <ul class="sidebar-box__list">
+                    <li class="sidebar-box__item">April</li>
+                    <li class="sidebar-box__item">May</li>
+                    <li class="sidebar-box__item">June</li>
+                    <li class="sidebar-box__item">July</li>
+                  </ul>
+                </div>
+                <div class="sidebar-box sidebar-box--tags">
+                  <div class="sidebar-box__top">
+                    <h4 class="sidebar-box__title">Tags</h4>
+                  </div>
+                  <div class="sidebar-box__tags tags">
+                    <ul class="tags__list">
+                      <li class="tags__item">
+                        <a href="#" class="sidebar-box__tag tags__link">Farm</a>
+                      </li>
+                      <li class="tags__item">
+                        <a href="#" class="sidebar-box__tag tags__link"
+                          >Organic</a
+                        >
+                      </li>
+                      <li class="tags__item">
+                        <a href="#" class="sidebar-box__tag tags__link">Food</a>
+                      </li>
+                      <li class="tags__item">
+                        <a href="#" class="sidebar-box__tag tags__link"
+                          >Restaurants</a
+                        >
+                      </li>
+                      <li class="tags__item">
+                        <a href="#" class="sidebar-box__tag tags__link"
+                          >Fruits</a
+                        >
+                      </li>
+                      <li class="tags__item">
+                        <a href="#" class="sidebar-box__tag tags__link"
+                          >Vegan</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="sidebar-box sidebar-box--banner">
+                  <div class="faqs__banner banner-small--faqs">
+                    <div
+                      class="banner-small__wrapper"
+                      style="
+                        background-image: url('images/content/bread-crumbs/9.jpg');
+                      "
+                    >
+                      <div class="banner-small__offer">
+                        <h3 class="banner-small__title">
+                          Best Offers <br />
+                          for Restaurants
+                        </h3>
+                        <button class="button banner-small__button">
+                          About Farmino
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </aside>
+            </div>
+
+            <div class="news__pagination pagination">
+              <ul class="pagination__list">
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link pagination__link--active"
+                    >1</a
+                  >
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#" class="pagination__link">4</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <div class="container-1700">
+          <div class="footer__wrapper">
+            <div class="wrap">
+              <div class="footer__offer">
+                <div class="footer__logo">
+                  <a href="#" class="logo">
+                    <img src="images/logo.png" alt="" />
+                  </a>
+                </div>
+                <p class="footer__descr">
+                  Donec placerat, metus sed consectetur viverra, dolor nisl
+                  egestas ligula, ac gravida turpis orci eget quam. Aliquam
+                  nulla nisi, accumsan id sapien varius, egestas vehicula di
+                </p>
+                <div class="footer__social social">
+                  <ul class="social__list">
+                    <li class="social__item">
+                      <a href="#" class="social__link">
+                        <img src="images/icons/instagram.svg" alt="" />
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link">
+                        <img src="images/icons/facebook-f.svg" alt="" />
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link">
+                        <img src="images/icons/youtube.svg" alt="" />
+                      </a>
+                    </li>
+                    <li class="social__item">
+                      <a href="#" class="social__link">
+                        <img src="images/icons/linkedin-in.svg" alt="" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="footer__bottom">
+                  <p class="footer__bottom-text">
+                    <strong>Merkulove</strong> © Farmino Template All rights
+                    reserved Copyrights 2020
+                  </p>
+                </div>
+              </div>
+              <div class="column">
+                <form class="footer__form form-signup">
+                  <div class="form-signup__inner">
+                    <h3 class="form-signup__title">
+                      Be informed! <span>Sign up for newsletter</span>
+                    </h3>
+                    <p class="form-signup__descr">
+                      Donec placerat, metus sed consectetur viverra, dolor nisl
+                      egestas ligula, ac gravida turpis
+                    </p>
+                    <div class="form-signup__field">
+                      <input type="email" placeholder="Email" />
+                    </div>
+                    <button class="button form-signup__button">
+                      Submit Now
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

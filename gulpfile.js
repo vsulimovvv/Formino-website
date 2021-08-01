@@ -7,15 +7,6 @@ const uglify = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
-const webpack = require('webpack');
-const webpackStream = require('webpack-stream');
-const rename = require('gulp-rename');
-const webp = require('gulp-webp');
-const webphtml = require('gulp-webp-html');
-const webpcss = require('gulp-webpcss');
-const webpconverter = require('webp-converter');
-// const fileinclude = require('gulp-file-include');
-// const babel = require('gulp-babel');
 
 function browsersync() {
   browserSync.init({
@@ -29,22 +20,9 @@ function cleanDist() {
   return del('dist');
 }
 
-function html() {
-  return src('app/*.html')
-    .pipe(webphtml())
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream());
-}
-
 function images() {
   return src('app/images/**/*')
-    .pipe(
-      webp({
-        quality: 70,
-      })
-    )
-    .pipe(dest('dist/images'))
-    .pipe(src('app/images/**/*'))
+    .pipe(imagemin())
     .pipe(
       imagemin([
         imagemin.gifsicle({ interlaced: true }),
@@ -59,28 +37,7 @@ function images() {
 }
 
 function scripts() {
-  return src('app/js/main.js')
-    .pipe(
-      webpackStream({
-        output: {
-          filename: 'main.js',
-        },
-        module: {
-          rules: [
-            {
-              test: /\.m?js$/,
-              exclude: /(node_modules|bower_components)/,
-              use: {
-                loader: 'babel-loader',
-                options: {
-                  presets: ['@babel/preset-env'],
-                },
-              },
-            },
-          ],
-        },
-      })
-    )
+  return src(['node_modules/jquery/dist/jquery.min.js', 'app/js/main.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(dest('app/js'))
@@ -92,9 +49,8 @@ function styles() {
     .pipe(scss({ outputStyle: 'compressed' }))
     .pipe(concat('style.min.css'))
     .pipe(
-      autoprefixer({ overrideBrowserslist: ['last 5 version'], grid: true })
+      autoprefixer({ overrideBrowserslist: ['last 10 version'], grid: true })
     )
-    .pipe(webpcss())
     .pipe(dest('app/css'))
     .pipe(browserSync.stream());
 }
@@ -104,7 +60,7 @@ function build() {
     [
       'app/css/style.min.css',
       'app/fonts/**/*',
-      'app/js/**/main.min.js',
+      'app/js/main.min.js',
       'app/*.html',
     ],
     { base: 'app' }
@@ -122,7 +78,6 @@ exports.watching = wathing;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
-exports.html = html;
 
-exports.build = series(cleanDist, html, images, build);
-exports.default = parallel(styles, images, scripts, browsersync, wathing);
+exports.build = series(cleanDist, images, build);
+exports.default = parallel(styles, scripts, browsersync, wathing);
