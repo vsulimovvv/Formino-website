@@ -25,7 +25,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/**/*')
+  return src('app/images/**/*')
     .pipe(imagemin())
     .pipe(
       imagemin([
