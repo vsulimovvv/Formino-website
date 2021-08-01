@@ -25,7 +25,7 @@ function cleanDist() {
 }
 
 function images() {
-  return src('app/images/**/*')
+  return src('app/images/**/**/*')
     .pipe(imagemin())
     .pipe(
       imagemin([
@@ -39,26 +39,6 @@ function images() {
     )
     .pipe(dest('dist/images'));
 }
-
-// function scripts() {
-//   return src(['node_modules/jquery/dist/jquery.min.js', 'app/js/main.js'])
-//     .pipe(concat('main.min.js'))
-//     .pipe(uglify())
-//     .pipe(dest('app/js'))
-//     .pipe(browserSync.stream());
-// }
-
-// const htmlInclude = () => {
-//   return src(['app/index.html'])
-//     // .pipe(
-//     //   fileinclude({
-//     //     prefix: '@@',
-//     //     basepath: '@file',
-//     //   })
-//     // )
-//     .pipe(dest('dist'))
-//     .pipe(browserSync.stream());
-// };
 
 function scripts() {
   return src('app/js/main.js')
